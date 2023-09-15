@@ -27,3 +27,33 @@ bankAccount.deposit(700);
 bankAccount.showBalance();
 
 //2
+
+const weather = {
+temperature: null,
+humidity: null,
+windSpeed: null,
+  
+checkTemperature: function() {
+const temperatureInput = document.getElementById("temperatureInput").value;
+    this.temperature = parseFloat(temperatureInput);
+  
+  if (this.temperature < 0) {
+    console.log("Температура нижче 0 градусів Цельсія");
+    return true;
+   } else {
+    console.log("Температура вище або рівна 0 градусів Цельсія");
+    return false;
+  }
+}
+};
+  
+function checkTemperature() {
+    weather.checkTemperature();
+}
+
+
+//3
+
+
+//4
+
