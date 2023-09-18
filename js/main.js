@@ -54,6 +54,50 @@ function checkTemperature() {
 
 //3
 
+const nameInp = document.querySelector(".nameInp ")
+const emailInp  = document.querySelector(".emailInp ")
+const passwordInp  = document.querySelector(".passwordInp ")
+
+const user = {
+  name: 'Di',
+  email: 'di145@gmail.com',
+  password: '002255',
+
+login: function () {
+  passwordInp.addEventListener("click", () => {
+      if (this.email === emailInp.value && this.password === passwordInp.value) {
+           console.log("Ви ввійшли в акаунт");
+      } else if (this.email != emailInp.value && this.password != passwordInp.value) {
+          console.log("Помилка у пошті та паролі");
+       } else if (this.email != emailInp.value) {
+          console.log("Помилка у пошті");
+       } else if (this.password != passwordInp.value) {
+            console.log("Помилка у паролі");
+      }
+  });        
+}
+};
+user.login();
 
 //4
 
+const h = document.querySelector(".h")
+const whichDirector = document.querySelector(".whichDirector")
+const whicYear = document.querySelector(".whicYear")
+const allRating = document.querySelector(".allRating")
+const movie = {
+    title: "Fhnfn Wqgj", 
+    director: "Lover Xergh", 
+    year: 2010, 
+    rating: 7.5,
+    madeAnotherColorText() {
+        h.textContent = this.title;
+        whichDirector.textContent = this.director;
+        whicYear.textContent = this.year;
+        allRating.textContent = this.rating;
+        if (this.rating > 8) {
+            return h.style.color = "green";
+        }
+    }
+}
+movie.madeAnotherColorText()
